@@ -6,13 +6,11 @@ mixin address()
       .container
         +b.address-head Музей современного искусства Erarta:
           span Санкт-Петербург, 29-я линия В.О., д.2
-          +e.A.btn(href="#map") Увеличить карту проезда
+          +e.A.btn(href="#map")
+            span Увеличить карту проезда
     +e.map-img
-
-
-
-
-
-
-
-
+      +e.pin
+      //- a(href='https://yandex.ru/maps/?um=constructor%3A9ddda8dc5f85f9eb6a153e990405c83ca7a2ed3fccb0861bb4766f75e5cda479&source=constructorStatic', target='_blank')
+      //-   img(src='https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A9ddda8dc5f85f9eb6a153e990405c83ca7a2ed3fccb0861bb4766f75e5cda479&width=600&height=400&lang=ru_RU', alt='', style='border: 0;')
+      a(href='https://yandex.ru/maps/?um=constructor%3A9ddda8dc5f85f9eb6a153e990405c83ca7a2ed3fccb0861bb4766f75e5cda479&source=constructorStatic', target='_blank')
+        img(src='https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A9ddda8dc5f85f9eb6a153e990405c83ca7a2ed3fccb0861bb4766f75e5cda479&width=600&height=400&lang=ru_RU', alt='', style='border: 0;')
