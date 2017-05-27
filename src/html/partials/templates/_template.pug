@@ -1,0 +1,25 @@
+include ../abstracts/bemto/bemto.pug
+//- include ../components/_header.pug
+//- include ../components/_footer.pug
+include _blocks.pug
+
+//- @pugdoc
+  name: Main template
+  description: template for pages
+
+doctype
+html(lang='ru', prefix='og: http://ogp.me/ns#')
+
+  include ../components/_head.pug
+
+  body
+
+    +header()
+
+    main
+      block content
+
+    +footer()
+
+    script(src='js/script.min.js')
+

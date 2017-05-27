@@ -1,0 +1,109 @@
+.speakers{
+  padding: 30px 0 15px;
+  &__title{
+    margin: 0 0 55px;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 26px;
+    line-height: (31/26);
+    font-weight: normal;
+    text-align: center;
+  }
+  &__gallery{
+    .slick-arrow{
+      color: transparent;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: none;
+    }
+    .slick-prev{
+      left: -50px;
+      @include sprite($s-arrow-left);
+      &:hover, &:focus{
+        @include sprite($s-arrow-left-hover);
+      }
+    }
+    .slick-next{
+      right: -50px;
+      @include sprite($s-arrow-right);
+      &:hover, &:focus{
+        @include sprite($s-arrow-right-hover);
+      }
+    }
+  }
+  &__inner{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+  }
+
+  &__link{
+    display: block;
+    padding: 20px 0;
+    text-align: center;
+    font-family: Roboto, Arial, sans-serif;
+    color: #666666;
+    font-size: 14px;
+    line-height: (23/14);
+    &:before{
+      content: '';
+      display: inline-block;
+      @include sprite($s-speakers-burger);
+      margin-right: 10px;
+    }
+  }
+}
+
+.speaker{
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+  padding: 0 5px;
+  margin: 5px 0;
+  &__inner{
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    display: flex;
+    // flex-wrap: wrap;
+    padding: 20px 10px;
+    @include transition();
+    &:hover, &:focus{
+      cursor: pointer;
+      background-image: $blue-gradient;
+      .speaker__name{
+        color: #fff;
+      }
+      .speaker__text{
+        color: #ccc;
+      }
+    }
+  }
+  &__img{
+    flex: 0 0 75px;
+    max-width: 75px;
+    img{
+      border-radius: 50%;
+    }
+  }
+  &__text-wrapper{
+    padding-left: 15px;
+    flex: 1 1 auto;
+  }
+  &__name{
+    margin: 0 0 5px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: (22/15);
+    font-weight: bold;
+    color: #5b81bf;
+  }
+  &__text{
+    color: #666666;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: (16/12);
+  }
+}

@@ -1,0 +1,12 @@
+mixin memberItem
+
+  +b.ARTICLE.member-item(itemscope, itemtype="http://schema.org/Person")
+    //- +e.img
+    //-   img(src="img/manager1.png", alt="manager", title="manager", itemprop="image")
+    +e.info
+      +e.name(itemprop="name") Ирина Владимирова
+      +e.position(itemprop="jobTitle") Начальник отдела юриспруденции
+      +e.answers 60 ответов на портале
+
+
+
