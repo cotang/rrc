@@ -2748,10 +2748,21 @@ img {
       bottom: 1px;
       background-color: #dcdcdc; }
   .address__map-img {
+    position: relative;
     width: 1024px;
     height: 400px;
     margin: 0 auto;
-    background-image: url(../img/map.png); }
+    text-align: center; }
+  .address__pin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-25%, -100%);
+        -ms-transform: translate(-25%, -100%);
+            transform: translate(-25%, -100%);
+    width: 209px;
+    height: 90px;
+    background-image: url(../img/pointer.png); }
 
 .address-head {
   font-size: 15px;
@@ -2759,10 +2770,10 @@ img {
   position: relative;
   height: 50px;
   width: 100%; }
-  .address-head span {
+  .address-head > span {
     padding: 10px 20px;
     font-weight: bold; }
-    .address-head span:before {
+    .address-head > span:before {
       content: '';
       display: inline-block;
       vertical-align: text-bottom;
@@ -2783,7 +2794,7 @@ img {
     z-index: 1;
     top: 0;
     right: 0; }
-    .address-head__btn:after {
+    .address-head__btn:before {
       content: '';
       position: absolute;
       height: 1px;
@@ -2791,12 +2802,22 @@ img {
       left: 0;
       top: 1px;
       background-color: #dcdcdc; }
-    .address-head__btn:before {
+    .address-head__btn:after {
       content: '';
-      display: inline-block;
-      vertical-align: text-bottom;
-      margin-right: 5px;
-      background-image: url(../img/png-sprite.png);
-      background-position: -273px -123px;
-      width: 16px;
-      height: 17px; }
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      left: 0;
+      bottom: 1px;
+      background-color: rgba(204, 204, 204, 0.5); }
+    .address-head__btn span {
+      display: inline-block; }
+      .address-head__btn span:before {
+        content: '';
+        display: inline-block;
+        vertical-align: text-bottom;
+        margin-right: 5px;
+        background-image: url(../img/png-sprite.png);
+        background-position: -273px -123px;
+        width: 16px;
+        height: 17px; }
