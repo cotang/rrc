@@ -11,6 +11,23 @@
     <meta name="keywords" content="">
     <meta name="description" content="rrc">
     <meta name="author" content="">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
     <title>rrc</title>
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.min.css">
@@ -19,9 +36,15 @@
   </head>
   <body class="index">
     <!-- Header-->
-    <header class="header">
+    <header class="header" id="header">
       <div class="header__container container">
-        <div class="header__inner"></div>
+        <div class="header__bg">
+          <div class="header__rrc"></div>
+          <div class="header__date"></div>
+          <div class="header__forum"></div>
+          <div class="header__partners"></div>
+          <div class="header__aurora"></div>
+        </div>
         <h1 class="header__title">В Питере — Революция? В Питере — Эволюция!</h1>
         <div class="header__text">
           <p>Революция сегодня — развитие технологий и высокая скорость движения в будущее.</p>
@@ -39,7 +62,7 @@
         </div>
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="/" title="Главная страница"></a>
+            <a href="#header" title="Главная страница"></a>
           </li>
           <li class="nav__item">
             <a href="#trends">О форуме</a>
@@ -193,7 +216,10 @@
               </div>
             </div>
           </div>
-          <a class="speakers__link" href="#">Развернуть полный список</a>
+          <div class="speakers__link-wrapper">
+            <a class="speakers__link speakers__link--open" href="#">Развернуть полный список</a>
+            <a class="speakers__link speakers__link--close" href="#">Свернуть список</a>
+          </div>
         </div>
       </section>
       <!-- Programme-->
@@ -308,7 +334,7 @@
               </div>
             </div>
             <div class="programme-forum__link-wrapper">
-              <a class="programme-forum__link" href="#">Распечатать программу форума</a>
+              <a class="programme-forum__link" href="img/program-rrc-revolution-forum.pdf" target="_blank">Распечатать программу форума</a>
             </div>
           </div>
         </div>
@@ -347,58 +373,62 @@
       <!-- Partners-->
       <section class="partners" id="partners">
         <div class="partners-list">
-          <div class="container">
-            <h2 class="partners-list__title">Партнеры форума</h2>
-            <div class="partners-list__blocks">
-              <div class="partners-block">
-                <h3 class="partners-block__title">
-                  <span>Gold partners</span>
-                </h3>
-                <div class="partners-block__pics">
-                  <div class="partners-block__img">
+          <h2 class="partners-list__title">Партнеры форума</h2>
+          <div class="partners-list__blocks">
+            <div class="partners-block">
+              <h3 class="partners-block__title">
+                <span>Gold partners</span>
+              </h3>
+              <div class="partners-block__pics">
+                <div class="container">
+                  <a class="partners-block__img" href="#" title="">
                     <img src="img/logo/gold1.png" alt="gold partner" />
-                  </div>
-                  <div class="partners-block__img">
+                  </a>
+                  <a class="partners-block__img" href="#" title="">
                     <img src="img/logo/gold2.png" alt="gold partner" />
-                  </div>
-                  <div class="partners-block__img">
+                  </a>
+                  <a class="partners-block__img" href="#" title="">
                     <img src="img/logo/gold3.png" alt="gold partner" />
-                  </div>
+                  </a>
                 </div>
               </div>
-              <div class="partners-block">
-                <h3 class="partners-block__title">
-                  <span>Silver partners</span>
-                </h3>
-                <div class="partners-block__pics">
-                  <div class="partners-block__img">
+            </div>
+            <div class="partners-block">
+              <h3 class="partners-block__title">
+                <span>Silver partners</span>
+              </h3>
+              <div class="partners-block__pics">
+                <div class="container">
+                  <a class="partners-block__img" href="#" title="">
                     <img src="img/logo/silver1.png" alt="silver partner" />
-                  </div>
-                  <div class="partners-block__img">
+                  </a>
+                  <a class="partners-block__img" href="#" title="">
                     <img src="img/logo/silver2.png" alt="silver partner" />
-                  </div>
-                  <div class="partners-block__img">
+                  </a>
+                  <a class="partners-block__img" href="#" title="">
                     <img src="img/logo/silver3.png" alt="silver partner" />
-                  </div>
+                  </a>
                 </div>
               </div>
-              <div class="partners-block">
-                <h3 class="partners-block__title">
-                  <span>Business partners</span>
-                </h3>
-                <div class="partners-block__pics">
-                  <div class="partners-block__img">
+            </div>
+            <div class="partners-block">
+              <h3 class="partners-block__title">
+                <span>Business partners</span>
+              </h3>
+              <div class="partners-block__pics">
+                <div class="container">
+                  <a class="partners-block__img" href="#" title="">
                     <img src="img/logo/business1.png" alt="business partner" />
-                  </div>
-                  <div class="partners-block__img">
+                  </a>
+                  <a class="partners-block__img" href="#" title="">
                     <img src="img/logo/business2.png" alt="business partner" />
-                  </div>
-                  <div class="partners-block__img">
+                  </a>
+                  <a class="partners-block__img" href="#" title="">
                     <img src="img/logo/business3.png" alt="business partner" />
-                  </div>
-                  <div class="partners-block__img">
+                  </a>
+                  <a class="partners-block__img" href="#" title="">
                     <img src="img/logo/business4.png" alt="business partner" />
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -459,12 +489,9 @@
             </div>
           </div>
         </div>
-        <div class="address__map-img">
-          <div class="address__pin"></div>
-          <a href="https://yandex.ru/maps/?um=constructor%3A9ddda8dc5f85f9eb6a153e990405c83ca7a2ed3fccb0861bb4766f75e5cda479&amp;source=constructorStatic" target="_blank">
-            <img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A9ddda8dc5f85f9eb6a153e990405c83ca7a2ed3fccb0861bb4766f75e5cda479&amp;width=600&amp;height=400&amp;lang=ru_RU" alt="" style="border: 0;" />
-          </a>
-        </div>
+        <a class="address__map-img" href="#map">
+          <span class="address__pin"></span>
+        </a>
       </section>
       <!-- Form-->
       <section class="form" id="form">

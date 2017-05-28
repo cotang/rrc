@@ -8659,33 +8659,44 @@ module.exports = {
 
 jQuery(document).ready(function($){
 
-  /* галерея speakers */
-  $('.speakers__gallery').slick({
-    infinite: false,
-    dots: false,
-    arrows: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    // centerMode: true,
-    centerPadding: '0'
-  });
+  function initSlider() {
+    /* галерея speakers */
+    $('.speakers__gallery').slick({
+      infinite: false,
+      dots: false,
+      arrows: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      // centerMode: true,
+      centerPadding: '0'
+    });
+  }
+  initSlider();
 
-  $('.speakers__link').click(function(e){
+  $('.speakers__link--open').click(function(e){
     e.preventDefault();
     $('.speakers__gallery').slick('unslick');
     $(this).hide();
+    $(this).closest('.speakers__link-wrapper').find('.speakers__link--close').show();
   });
-
+  $('.speakers__link--close').click(function(e){
+    e.preventDefault();
+    initSlider();
+    $(this).hide();
+    $(this).closest('.speakers__link-wrapper').find('.speakers__link--open').show();
+  });
 
   /* Fixed menu */
   var nav = $('.nav');
   var navTopCoord = nav.offset().top;
-
+  var navHeight = $(".nav").outerHeight(true);
   // if ($(window).width() > 1024) {
     $(window).scroll(function () {
-      if ($(this).scrollTop() >= navTopCoord /* - 27 */ ) {
+      if ($(this).scrollTop() >= navTopCoord ) {
         $(nav).addClass('nav--fixed');
+        $('main').css("padding-top", navHeight + "px");
      } else {
+        $('main').css("padding-top", 0);
         $(nav).removeClass('nav--fixed');
       }
     });
@@ -8697,13 +8708,13 @@ jQuery(document).ready(function($){
       e.preventDefault();
       var el = $(this).attr('href');
       $('body, html').animate({
-      scrollTop: ($(el).offset().top - $('.nav').outerHeight(true))}, 500);
+      scrollTop: ($(el).offset().top - navHeight )}, 500);
       return false;
   });
 
 
   /* Popup programme */
-  $('.culture-block, .address-head__btn').click( function(e){
+  $('.culture-block, .address-head__btn, .address__map-img').click( function(e){
     e.preventDefault();
     $('body').css({"overflow":"hidden"});
     $('.overlay').show();
