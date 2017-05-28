@@ -1707,7 +1707,7 @@ img {
   right: 0;
   top: 0;
   bottom: 0;
-  min-height: auto; }
+  height: auto; }
   .entrance .header__inner {
     top: 0;
     height: 100vh; }
