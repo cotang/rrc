@@ -8737,8 +8737,8 @@ jQuery(document).ready(function($){
     var myPlacemark = new ymaps.Placemark([59.931896, 30.251621], {}, {
       iconLayout: 'default#image',
       iconImageHref: 'img/pointer.png',
+      iconImageOffset: [-50, -90],
       iconImageSize: [209, 90],
-      iconImageOffset: [-50, -90]
     });
     myMap.geoObjects.add(myPlacemark);
   });
