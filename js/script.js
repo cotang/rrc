@@ -8738,7 +8738,7 @@ jQuery(document).ready(function($){
       iconLayout: 'default#image',
       iconImageHref: 'img/pointer.png',
       iconImageSize: [209, 90],
-      // iconImageOffset: [-50, -90]
+      iconImageOffset: [-50, -90]
     });
     myMap.geoObjects.add(myPlacemark);
   });
