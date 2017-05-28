@@ -77,7 +77,7 @@ jQuery(document).ready(function($){
     });
     var myPlacemark = new ymaps.Placemark([59.931896, 30.251621], {}, {
       iconLayout: 'default#image',
-      iconImageHref: '/img/pointer.png',
+      iconImageHref: 'img/pointer.png',
       iconImageSize: [209, 90],
       iconImageOffset: [-50, -90]
     });
