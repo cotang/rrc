@@ -5,9 +5,9 @@ jQuery(document).ready(function($){
     infinite: false,
     dots: false,
     arrows: true,
-    slidesToShow: 1,
+    slidesToShow: 3,
     slidesToScroll: 1,
-    centerMode: true,
+    // centerMode: true,
     centerPadding: '0'
   });
 
@@ -75,14 +75,16 @@ jQuery(document).ready(function($){
       center: [59.931896, 30.251621],
       zoom: 15
     });
+    // var myPlacemark = new ymaps.Placemark([59.931896, 30.251621], {}, {
+    //   iconImageHref: '/img/pointer.png',
+    //   iconImageSize: [209, 90],
+    //   iconImageOffset: [0, 0]
+    // });
     var myPlacemark = new ymaps.Placemark([59.931896, 30.251621], {}, {
-      iconImageHref: '/img/pointer.png',
-      iconImageSize: [209, 90],
-      iconImageOffset: [0, 0]
+      preset: 'twirl#blueDotIcon'
     });
     myMap.geoObjects.add(myPlacemark);
   });
-
 
 
 
