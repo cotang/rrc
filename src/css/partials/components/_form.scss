@@ -135,6 +135,9 @@
         margin-right: 5px;
         @include sprite($s-unchecked);
       }
+      &:hover, &:focus{
+        cursor: pointer;
+      }
     }
   }
   &__programme-choice{
@@ -175,6 +178,9 @@
         vertical-align: baseline;
         margin-right: 5px;
         @include sprite($s-unchecked2);
+      }
+      &:hover, &:focus{
+        cursor: pointer;
       }
     }
   }

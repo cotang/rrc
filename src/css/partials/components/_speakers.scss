@@ -39,10 +39,11 @@
   &__slide{
     padding: 0 5px;
   }
-
-  &__link{
-    display: block;
+  &__link-wrapper{
+    text-align: center;
     padding: 20px 0;
+  }
+  &__link{
     text-align: center;
     font-family: Roboto, Arial, sans-serif;
     color: #666666;
@@ -53,6 +54,12 @@
       display: inline-block;
       @include sprite($s-speakers-burger);
       margin-right: 10px;
+    }
+    &--open{
+      // display: block;
+    }
+    &--close{
+      display: none;
     }
   }
 }

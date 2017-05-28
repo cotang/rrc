@@ -1,10 +1,14 @@
 mixin header()
 
   // Header
-  +b.HEADER.header
+  +b.HEADER.header(id="header")
     +e.container.container
-      +e.inner
-
+      +e.bg
+        +e.rrc
+        +e.date
+        +e.forum
+        +e.partners
+        +e.aurora
 
       if block
         block

@@ -12,9 +12,6 @@
     font-weight: normal;
     text-align: center;
   }
-  // &__blocks{
-
-  // }
 }
 .partners-block{
   &:nth-of-type(1){
@@ -73,6 +70,9 @@
     padding: 0;
     max-height: 95px;
     text-align: center;
+    &:hover, &:focus{
+      opacity: 0.5;
+    }
   }
 }
 

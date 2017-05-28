@@ -31,12 +31,14 @@
     }
   }
   &__map-img{
+    display: block;
     position: relative;
-    width: 1024px;
+    width: 100%;
     height: 400px;
     margin: 0 auto;
     text-align: center;
-    // background-image: url(../img/map.png);
+    background-image: url(../img/map.jpg);
+    background-position: center center;
   }
   &__pin{
     position: absolute;
@@ -73,7 +75,8 @@
     line-height: 50px;
     height: 50px;
     display: inline-block;
-    background-image: linear-gradient( 180deg, rgb(89,139,189) 0%, rgb(73,88,144) 100%);
+    background: linear-gradient( 180deg, rgb(89,139,189) 0%, rgb(73,88,144) 100%);
+    // background-color: transparent;
     position: absolute;
     z-index: 1;
     top: 0;
@@ -105,6 +108,10 @@
         margin-right: 5px;
         @include sprite($s-loupe);
       }
+    }
+    &:hover, &:focus{
+      background-image: none;
+      background-color: #5668aa;
     }
   }
 }
