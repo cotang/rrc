@@ -76,26 +76,13 @@ jQuery(document).ready(function($){
       zoom: 15
     });
     var myPlacemark = new ymaps.Placemark([59.931896, 30.251621], {}, {
+      iconLayout: 'default#image',
       iconImageHref: '/img/pointer.png',
       iconImageSize: [209, 90],
-      iconImageOffset: [0, 0]
+      iconImageOffset: [-50, -90]
     });
-    // var myPlacemark = new ymaps.Placemark([59.931896, 30.251621], {}, {
-    //   preset: 'twirl#redDotIcon'
-    // });
     myMap.geoObjects.add(myPlacemark);
   });
-
-
-
-
-
-
-
-
-
-
-
 
 
 
