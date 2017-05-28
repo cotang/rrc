@@ -1822,7 +1822,8 @@ img {
         background-position: 0px -129px;
         width: 190px;
         height: 39px;
-        line-height: 39px;
+        line-height: 37px;
+        font-size: 15px;
         color: #ffffff;
         transition: none; }
         .nav__item:last-of-type > a:hover, .nav__item:last-of-type > a:focus, .nav__item:last-of-type > a:active {
