@@ -3,39 +3,30 @@
   height: 665px;
   &__container{
     position: relative;
+    height: 665px;
   }
+  &__upper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 170px;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto auto;
+    background-image: url(../img/logo-rrc.png), url(../img/header-partners.png);
+    background-position: left, right;
+  }
+
+
+
+
   &__bg{
     position: absolute;
-    top: -20px;
+    top: 50%;
+    transform: translateY(-50%);
     left: -15px;
     width: calc(100% + 30px);
     height: 665px;
-    background-repeat: no-repeat;
-    // background-image: url(../img/logo-rrc.png),
-    //                   url(../img/header-date.png),
-    //                   url(../img/logo.png),
-    //                   url(../img/header-partners.png),
-    //                   url(../img/aurora-bg.png);
-    // background-position:  0px 50px,
-    //                       130px 175px,
-    //                       0px 215px,
-    //                       675px 65px,
-    //                       350px 150px;
-    // background-size:  auto,
-    //                   auto,
-    //                   auto,
-    //                   auto,
-    //                   660px 430px;
-  }
-  &__rrc{
-    position: absolute;
-    left: 0;
-    top: 50px;
-    background-repeat: no-repeat;
-    background-image: url(../img/logo-rrc.png);
-    background-size: auto;
-    width: 240px;
-    height: 86px;
   }
   &__date{
     position: absolute;
@@ -57,18 +48,9 @@
     width: 384px;
     height: 166px;
   }
-  &__partners{
-    position: absolute;
-    left: 675px;
-    top: 65px;
-    background-repeat: no-repeat;
-    background-image: url(../img/header-partners.png);
-    background-size: auto;
-    width: 244px;
-    height: 51px;
-  }
   &__aurora{
     position: absolute;
+    pointer-events: none;
     left: 220px;
     top: 165px;
     background-repeat: no-repeat;
@@ -79,10 +61,10 @@
     opacity: 0.7;
   }
 
+
   &__city{
+    display: none;
     padding-top: 420px;
-    position: relative;
-    left: -30px;
   }
   &__title{
     margin: 0;
@@ -153,8 +135,11 @@
   top: 0;
   bottom: 0;
   height: auto;
-  &__inner{
-    top: 0;
+  &__container{
+    // top: 0;
     height: 100vh;
+  }
+  &__city{
+    display: block;
   }
 }
