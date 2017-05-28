@@ -75,14 +75,14 @@ jQuery(document).ready(function($){
       center: [59.931896, 30.251621],
       zoom: 15
     });
-    // var myPlacemark = new ymaps.Placemark([59.931896, 30.251621], {}, {
-    //   iconImageHref: '/img/pointer.png',
-    //   iconImageSize: [209, 90],
-    //   iconImageOffset: [0, 0]
-    // });
     var myPlacemark = new ymaps.Placemark([59.931896, 30.251621], {}, {
-      preset: 'twirl#blueDotIcon'
+      iconImageHref: '/img/pointer.png',
+      iconImageSize: [209, 90],
+      iconImageOffset: [0, 0]
     });
+    // var myPlacemark = new ymaps.Placemark([59.931896, 30.251621], {}, {
+    //   preset: 'twirl#redDotIcon'
+    // });
     myMap.geoObjects.add(myPlacemark);
   });
 
