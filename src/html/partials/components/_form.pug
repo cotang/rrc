@@ -28,8 +28,7 @@ mixin form()
           +e.SELECT.select(name='Город')
             option(selected disabled) Выберите ваш город
             option Санкт-Петербург
-            option Москва
-            option Екатеринбург
+            option другой город
         +e.hotel-need Нужна ли Вам гостиница в Санкт-Петербурге?
           +e.need-option
             input(type='radio', id='radio1', name='Необходимость гостиницы', value='Гостиница нужна')

@@ -53,7 +53,8 @@
         padding: 0;
         margin: 11px 0;
         @include sprite($s-btn-register);
-        line-height: 39px;
+        line-height: 37px;
+        font-size: 15px;
         color: $white;
         transition: none;
         &:hover, &:focus, &:active {

@@ -64,7 +64,8 @@ jQuery(document).ready(function($){
     .animate({opacity: 1}, 200);
   });
   /* Close the modal window */
-  $('.overlay__bg, .popup__close').click( function(){
+  $('.overlay__bg, .popup__close').click( function(e){
+    e.preventDefault();
     $('body').css({"overflow":"auto"});
     $(this).closest('.overlay').find('.popup')
       .animate({opacity: 0}, 200,
