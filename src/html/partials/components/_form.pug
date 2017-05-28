@@ -23,12 +23,9 @@ mixin form()
         +e.LABEL.label
           span Электронная почта
           +e.INPUT.input(type='email', name='Электронная почта', placeholder='Укажите адрес вашей электронной почты')
-        +e.LABEL.label--select
+        +e.LABEL.label
           span Город
-          +e.SELECT.select(name='Город')
-            option(selected disabled) Выберите ваш город
-            option Санкт-Петербург
-            option другой город
+          +e.INPUT.input(type='text', name='Город', placeholder='Укажите ваш город')
         +e.hotel-need Нужна ли Вам гостиница в Санкт-Петербурге?
           +e.need-option
             input(type='radio', id='radio1', name='Необходимость гостиницы', value='Гостиница нужна')

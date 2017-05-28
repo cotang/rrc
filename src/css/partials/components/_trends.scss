@@ -76,16 +76,7 @@
     color: #fff;
     font-family: Arial, sans-serif;
     text-align: center;
-    &:before{
-      content: '';
-      display: block;
-      background-image: url('../img/erarta-logotype.png');
-      background-repeat: no-repeat;
-      background-size: contain;
-      width: 125px;
-      height: 27px;
-      margin: 0 auto 5px;
-    }
+
     p{
       margin: 0;
     }
@@ -93,6 +84,16 @@
       font-weight: bold;
       font-size: 12px;
       line-height: (22/12);
+      &:after{
+        content: '';
+        display: block;
+        background-image: url('../img/erarta-logotype.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 125px;
+        height: 27px;
+        margin: 5px auto 5px;
+      }
     }
     p:nth-of-type(2){
       font-weight: bold;
