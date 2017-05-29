@@ -159,14 +159,14 @@
   &__option{
     width: 100%;
     display: inline-block;
-    input[type='checkbox']{
+    input[type='radio']{
       display: none;
       &:checked ~ label{
         background-color: #5e80bf;
         color: #c2d7fe;
       }
       &:checked ~ label:before{
-        @include sprite($s-checked2);
+        @include sprite($s-checked);
       }
     }
     label{
@@ -175,9 +175,9 @@
       &:before{
         content: '';
         display: inline-block;
-        vertical-align: baseline;
+        vertical-align: text-bottom;
         margin-right: 5px;
-        @include sprite($s-unchecked2);
+        @include sprite($s-unchecked);
       }
       &:hover, &:focus{
         cursor: pointer;

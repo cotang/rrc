@@ -28,11 +28,11 @@ mixin form()
           +e.INPUT.input(type='text', name='Город', placeholder='Укажите ваш город')
         +e.hotel-need Нужна ли Вам гостиница в Санкт-Петербурге?
           +e.need-option
-            input(type='radio', id='radio1', name='Необходимость гостиницы', value='Гостиница нужна')
-            label(for='radio1') Да
+            input(type='radio', id='need-radio1', name='Необходимость гостиницы', value='Гостиница нужна')
+            label(for='need-radio1') Да
           +e.need-option
-            input(type='radio', id='radio2', name='Необходимость гостиницы', value='Гостиница нет нужна')
-            label(for='radio2') Нет
+            input(type='radio', id='need-radio2', name='Необходимость гостиницы', value='Гостиница нет нужна')
+            label(for='need-radio2') Нет
         +e.LABEL.label--calendar
           span Дата и время приезда
           +e.INPUT.input.calendar(type='text', id="calendar1", name='Дата и время приезда', placeholder='Выберите дату и время приезда')
@@ -43,29 +43,29 @@ mixin form()
             |  в которой вы хотели бы принять участие (организаторы вправе вносить изменения в программу в случае, если группа на какую-либо программу не будет набрана):
           +e.options
             +e.option
-              input(type='checkbox', id='checkbox1', name='Программы', value='Парадный Петергоф')
-              label(for='checkbox1') Парадный Петергоф
+              input(type='radio', id='programme-radio1', name='Программы', value='Парадный Петергоф')
+              label(for='programme-radio1') Парадный Петергоф
             +e.option
-              input(type='checkbox', id='checkbox2', name='Программы', value='Взять Зимний!')
-              label(for='checkbox2') Взять Зимний!
+              input(type='radio', id='programme-radio2', name='Программы', value='Взять Зимний!')
+              label(for='programme-radio2') Взять Зимний!
             +e.option
-              input(type='checkbox', id='checkbox3', name='Программы', value='Русский музей и Летний сад')
-              label(for='checkbox3') Русский музей и Летний сад
+              input(type='radio', id='programme-radio3', name='Программы', value='Русский музей и Летний сад')
+              label(for='programme-radio3') Русский музей и Летний сад
             +e.option
-              input(type='checkbox', id='checkbox4', name='Программы', value='Выстрел с Невы')
-              label(for='checkbox4') Выстрел с Невы
+              input(type='radio', id='programme-radio4', name='Программы', value='Выстрел с Невы')
+              label(for='programme-radio4') Выстрел с Невы
             +e.option
-              input(type='checkbox', id='checkbox5', name='Программы', value='В Питере – пить!')
-              label(for='checkbox5') В Питере – пить!
+              input(type='radio', id='programme-radio5', name='Программы', value='В Питере – пить!')
+              label(for='programme-radio5') В Питере – пить!
             +e.option
-              input(type='checkbox', id='checkbox6', name='Программы', value='Крыши и парадные Петербурга')
-              label(for='checkbox6') Крыши и парадные Петербурга
+              input(type='radio', id='programme-radio6', name='Программы', value='Крыши и парадные Петербурга')
+              label(for='programme-radio6') Крыши и парадные Петербурга
             +e.option
-              input(type='checkbox', id='checkbox7', name='Программы', value='Бандитский Петербург')
-              label(for='checkbox7') Бандитский Петербург
+              input(type='radio', id='programme-radio7', name='Программы', value='Бандитский Петербург')
+              label(for='programme-radio7') Бандитский Петербург
             +e.option
-              input(type='checkbox', id='checkbox8', name='Программы', value='КиноПетербург')
-              label(for='checkbox8') КиноПетербург
+              input(type='radio', id='programme-radio8', name='Программы', value='КиноПетербург')
+              label(for='programme-radio8') КиноПетербург
 
         +e.LABEL.label--calendar
           span Дата и время приезда
