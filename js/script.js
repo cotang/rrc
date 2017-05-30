@@ -8668,7 +8668,21 @@ jQuery(document).ready(function($){
       slidesToShow: 3,
       slidesToScroll: 1,
       // centerMode: true,
-      centerPadding: '0'
+      centerPadding: '0',
+      responsive: [
+        {
+          breakpoint: 919,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1
+          }
+        }
+      ]
     });
   }
   initSlider();
@@ -8756,8 +8770,17 @@ jQuery(document).ready(function($){
   });
 
 
+  $('.nav__item--menu').click(function(e) {
+      e.preventDefault();
+      $(this).toggleClass('nav__item--menu-bg');
+      $(this).closest('.nav').find('.nav__dropdown-list').slideToggle();
+  });
 
-
+  if ($(window).width() < 768) {
+    $('.forum-block__img').each(function(){
+      $(this).appendTo($(this).closest('.forum-block__text'));
+    });
+  }
 
 
 
@@ -8773,10 +8796,7 @@ jQuery(document).ready(function($){
   // });
 
 
-  // $('.hamburger').click(function(e) {
-  //     e.preventDefault();
-  //     $(this).closest('.header__nav').find('.nav__list').slideToggle();
-  // });
+
 
   // $(window).resize(function(){
   //   if ($(window).width() > 768) {

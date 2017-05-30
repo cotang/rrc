@@ -63,14 +63,12 @@
     <!-- Nav-->
     <nav class="nav">
       <div class="container">
-        <div class="nav__hamburger">
-          <a class="hamburger" href="#">
-            <span></span>
-          </a>
-        </div>
         <ul class="nav__list">
-          <li class="nav__item">
+          <li class="nav__item nav__item--home">
             <a href="#header" title="Главная страница"></a>
+          </li>
+          <li class="nav__item nav__item--menu">
+            <a href="#">Меню</a>
           </li>
           <li class="nav__item">
             <a href="#trends">О форуме</a>
@@ -90,17 +88,38 @@
           <li class="nav__item">
             <a href="#contacts">Контакты</a>
           </li>
-          <li class="nav__item">
+          <li class="nav__item nav__item--btn">
             <a class="btn" href="#form">Зарегистрироваться</a>
           </li>
         </ul>
       </div>
+      <ul class="nav__dropdown-list">
+        <li class="nav__dropdown-item">
+          <a href="#trends">О форуме</a>
+        </li>
+        <li class="nav__dropdown-item">
+          <a href="#speakers">Спикеры</a>
+        </li>
+        <li class="nav__dropdown-item">
+          <a href="#programme">Программа</a>
+        </li>
+        <li class="nav__dropdown-item">
+          <a href="#partners">Партнёры</a>
+        </li>
+        <li class="nav__dropdown-item">
+          <a href="#address">Как добраться</a>
+        </li>
+        <li class="nav__dropdown-item">
+          <a href="#contacts">Контакты</a>
+        </li>
+      </ul>
     </nav>
     <main>
       <!-- Trends-->
       <section class="trends" id="trends">
         <div class="container">
-          <h2 class="trends__title">Основные тренды для обсуждения на форуме</h2>
+          <h2 class="trends__title">
+            <span>Основные тренды</span>для обсуждения на форуме</h2>
           <div class="trends__inner">
             <ul class="trends__facts">
               <li class="trends__fact-item">BigData и искусственный интеллект</li>
@@ -489,8 +508,9 @@
         <h2 class="address__title">Место проведения Форума</h2>
         <div class="address__map">
           <div class="container">
-            <div class="address-head">Музей современного искусства Erarta:
-              <span>Санкт-Петербург, 29-я линия В.О., д.2</span>
+            <div class="address-head">
+              <span class="normal">Музей современного искусства Erarta:</span>
+              <span class="bold">Санкт-Петербург, 29-я линия В.О., д.2</span>
               <a class="address-head__btn" href="#map">
                 <span>Увеличить карту проезда</span>
               </a>
@@ -535,7 +555,8 @@
               <span>Город</span>
               <input class="form__input" type="text" name="Город" placeholder="Укажите ваш город" />
             </label>
-            <div class="form__hotel-need">Нужна ли Вам гостиница в Санкт-Петербурге?
+            <div class="form__hotel-need">
+              <span>Нужна ли Вам гостиница в Санкт-Петербурге?</span>
               <div class="form__need-option">
                 <input type="radio" id="need-radio1" name="Необходимость гостиницы" value="Гостиница нужна" />
                 <label for="need-radio1">Да</label>
@@ -551,7 +572,9 @@
             </label>
             <div class="form__programme-choice">
               <div class="form__choice-text">
-                <span class="bold">Выберите программу,</span> в которой вы хотели бы принять участие (организаторы вправе вносить изменения в программу в случае, если группа на какую-либо программу не будет набрана):</div>
+                <span class="bold">Выберите программу,</span>
+                <span class="normal">в которой вы хотели бы принять участие (организаторы вправе вносить изменения в программу в случае, если группа на какую-либо программу не будет набрана):</span>
+              </div>
               <div class="form__options">
                 <div class="form__option">
                   <input type="radio" id="programme-radio1" name="Программы" value="Парадный Петергоф" />
@@ -648,8 +671,9 @@
           <h2 class="popup__title">Место проведения форума</h2>
           <div class="popup__frame" id="YMapsID"></div>
           <div class="popup__address">
-            <div class="address-head">Музей современного искусства Erarta:
-              <span>Санкт-Петербург, 29-я линия В.О., д.2</span>
+            <div class="address-head">
+              <span class="normal">Музей современного искусства Erarta:</span>
+              <span class="bold">Санкт-Петербург, 29-я линия В.О., д.2</span>
             </div>
           </div>
         </section>
