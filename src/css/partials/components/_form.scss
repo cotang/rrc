@@ -1,5 +1,30 @@
 .form{
   padding: 65px 0 70px;
+  @media (max-width: $screen-xl){
+    padding: 0 0 0;
+    background-image: linear-gradient( 90deg, #5e84c1 0%, #5668aa 50%, #5e84c1 100%);
+    overflow-x: hidden;
+    position: relative;
+  }
+  @media (max-width: $screen-md){
+    background-image: none;
+    padding-bottom: 20px;
+  }
+
+  &:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-image: linear-gradient( 90deg, #7085c6 0%, #9ad5f6 50%, #7085c6 100%);
+    display: none;
+    @media (max-width: $screen-xl){
+      display: block;
+    }
+  }
+
   &__title{
     margin: 0 0 70px;
     font-family: Roboto, Arial, sans-serif;
@@ -7,28 +32,92 @@
     line-height: (31/26);
     font-weight: normal;
     text-align: center;
+    @media (max-width: $screen-xl){
+      font-family: Calibri, sans-serif;
+      margin: 0;
+      padding: 40px 0;
+      background-color: #fff;
+      position: relative;
+    }
+    @media (max-width: $screen-md){
+      font-size: 20px;
+      line-height: (24/20);
+      padding: 20px 0;
+      font-weight: bold;
+    }
+    &:before, &:after{
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      display: none;
+      @media (max-width: $screen-xl){
+        display: block;
+      }
+      @media (max-width: $screen-md){
+        display: none;
+      }
+    }
+    &:before{
+      left: -100%;
+    }
+    &:after{
+      left: 100%;
+    }
   }
   &__inner{
     background-image: linear-gradient( 90deg, #5e84c1 0%, #5668aa 50%, #5e84c1 100%);
     color: #fff;
     padding: 30px 95px 35px;
     box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 0.35);
+    @media (max-width: $screen-xl){
+      padding: 30px 0 35px;
+      background-image: none;
+      box-shadow: none;
+    }
+    @media (max-width: $screen-md){
+      padding: 10px 0 20px;
+      box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 0.35);
+      background-image: linear-gradient( 90deg, #5e84c1 0%, #5668aa 50%, #5e84c1 100%);
+    }
   }
   &__form-title{
     padding: 0 0 35px;
     text-align: center;
+    @media (max-width: $screen-xl){
+      padding: 0 0 25px;
+    }
+    @media (max-width: $screen-md){
+      font-size: 13px;
+      line-height: (17/13);
+      border-bottom: 1px solid #7490c6;
+      padding-bottom: 10px;
+    }
   }
   &__label{
     display: block;
     border: 2px solid #6ba3df;
     margin-bottom: 10px;
     font-size: 0;
-    span{
+    @media (max-width: $screen-md){
+      border: none;
+      padding: 0 10px;
+    }
+
+    > span{
       font-weight: bold;
       display: inline-block;
       font-size: 14px;
       width: 26%;
       padding: 11px;
+      @media (max-width: $screen-md){
+        display: block;
+        width: 100%;
+        padding: 8px 0;
+        font-size: 13px;
+      }
     }
     &--select{
       position: relative;
@@ -71,6 +160,10 @@
         right: 10px;
         pointer-events: none;
         @include sprite($s-calendar);
+        @media (max-width: $screen-md){
+          top: 50px;
+          right: 20px;
+        }
       }
       &:hover, &:focus{
         // cursor: pointer;
@@ -101,6 +194,12 @@
     &:focus::placeholder{
       color: transparent;
     }
+    @media (max-width: $screen-md){
+      display: block;
+      width: 100%;
+      border: 2px solid #6ba3df;
+      padding: 8px;
+    }
   }
   &__select{
     font-size: 14px;
@@ -113,14 +212,31 @@
     font-weight: bold;
     margin: 30px 15px;
     font-size: 15px;
+    @media (max-width: $screen-xl){
+      margin: 25px 15px;
+    }
+    @media (max-width: $screen-md){
+      font-size: 13px;
+      margin: 25px 15px 10px;
+    }
+    > span{
+      @media (max-width: $screen-md){
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
   }
   &__need-option{
     display: inline-block;
+    &:nth-of-type(1){
+      label{
+        @media (max-width: $screen-md){
+          padding-left: 0;
+        }
+      }
+    }
     input[type='radio']{
       display: none;
-      // &:checked ~ label{
-
-      // }
       &:checked ~ label:before{
         @include sprite($s-checked);
       }
@@ -144,6 +260,12 @@
     margin: 30px 0 20px;
     font-size: 15px;
     line-height: (23/15);
+    @media (max-width: $screen-xl){
+      margin: 20px 0 10px;
+    }
+    @media (max-width: $screen-md){
+      font-size: 13px;
+    }
     .bold{
       font-weight: bold;
     }
@@ -155,6 +277,9 @@
     font-weight: bold;
     margin-top: 10px;
     columns: 2;
+    @media (max-width: $screen-md){
+      columns: 1;
+    }
   }
   &__option{
     width: 100%;
@@ -187,6 +312,10 @@
   &__btn{
     margin-top: 35px;
     text-align: center;
+    @media (max-width: $screen-md){
+      margin-top: 20px;
+    }
+
     .btn{
       line-height: 41px;
       background-color: transparent;
@@ -195,6 +324,7 @@
       position: relative;
       @include sprite($s-btn-form);
       &:hover, &:focus{
+        line-height: 43px;
         margin: 0 0 2px;
         @include sprite($s-btn-form-hover);
       }

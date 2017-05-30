@@ -3,12 +3,11 @@ mixin nav()
   // Nav
   +b.NAV.nav
     .container
-      +e.hamburger
-        +b.A.hamburger(href="#")
-          span
       +e.UL.list
-        +e.item
+        +e.item--home
           a(href="#header", title="Главная страница")
+        +e.item--menu
+          a(href="#") Меню
         +e.item
           a(href="#trends") О форуме
         +e.item
@@ -21,6 +20,18 @@ mixin nav()
           a(href="#address") Как добраться
         +e.item
           a(href="#contacts") Контакты
-        +e.item
+        +e.item--btn
           +b.A.btn(href="#form") Зарегистрироваться
-
+    +e.UL.dropdown-list
+      +e.dropdown-item
+        a(href="#trends") О форуме
+      +e.dropdown-item
+        a(href="#speakers") Спикеры
+      +e.dropdown-item
+        a(href="#programme") Программа
+      +e.dropdown-item
+        a(href="#partners") Партнёры
+      +e.dropdown-item
+        a(href="#address") Как добраться
+      +e.dropdown-item
+        a(href="#contacts") Контакты

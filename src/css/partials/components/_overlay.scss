@@ -27,6 +27,12 @@
     // max-width: 750px;
     max-width: 1000px;
     background-color: $white;
+    @media (max-width: $screen-xl){
+      max-width: 710px;
+    }
+    @media (max-width: $screen-md){
+      max-width: 300px;
+    }
   }
 }
 
@@ -35,12 +41,16 @@
   position: relative;
   &__title{
     margin: 0;
-    padding: 10px 20px;
+    padding: 10px 50px 10px 20px;
     color: #fff;
     font-family: Arial, sans-serif;
     font-weight: bold;
     font-size: 17px;
     background-image: $blue-gradient;
+    @media (max-width: $screen-md){
+      font-size: 14px;
+      padding: 5px 30px 5px 10px;
+    }
   }
   &__close{
     display: block;
@@ -58,6 +68,12 @@
       position: absolute;
       top: 12px;
       right: 2px;
+      @media (max-width: $screen-md){
+        top: 7px;
+        height: 2px;
+        right: 0;
+        width: 20px;
+      }
     }
     &:before{
       transform: rotate(-45deg);
@@ -69,6 +85,9 @@
   &__text-wrapper{
     padding: 5px 15px;
     font-size: 0;
+    @media (max-width: $screen-md){
+      padding: 5px 10px;
+    }
   }
   &__info{
     display: inline-block;
@@ -76,9 +95,15 @@
     width: 30%;
     font-size: 13px;
     line-height: (24/13);
+    @media (max-width: $screen-md){
+      width: 100%;
+    }
     p{
       span{
         color: #666;
+      }
+      @media (max-width: $screen-md){
+        margin: 0;
       }
     }
   }
@@ -88,6 +113,12 @@
     width: 70%;
     font-size: 14px;
     line-height: (20/14);
+    @media (max-width: $screen-md){
+      width: 100%;
+      font-size: 12px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
   }
   &__img{
     height: 400px;
@@ -98,12 +129,21 @@
       display: block;
       object-fit: cover;
     }
+    @media (max-width: $screen-md){
+      height: 140px;
+    }
   }
   &__frame{
     height: 80vh;
+    // @media (max-width: $screen-md){
+
+    // }
   }
   &__address{
     background-color: #eaeaea;
     padding: 0 20px;
+    @media (max-width: $screen-md){
+      padding: 0;
+    }
   }
 }

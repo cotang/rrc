@@ -1,5 +1,18 @@
 .trends{
   padding: 55px 0 30px;
+  @media (max-width: $screen-xl){
+    padding: 30px 0 0;
+  }
+  @media (max-width: $screen-md){
+    padding: 35px 0 0;
+  }
+  .container{
+    @media (max-width: $screen-md){
+      max-width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
   &__title{
     margin: 0 0 60px;
     font-family: Calibri, sans-serif;
@@ -7,6 +20,22 @@
     line-height: (31/26);
     font-weight: normal;
     text-align: center;
+    @media (max-width: $screen-xl){
+      margin: 0 0 35px;
+    }
+    @media (max-width: $screen-md){
+      margin: 0 0 20px;
+      font-size: 14px;
+      line-height: (22/14);
+    }
+    span{
+      @media (max-width: $screen-md){
+        display: block;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: (22/20);
+      }
+    }
   }
   &__inner{
     background-color: #e8e8e8;
@@ -20,6 +49,12 @@
     list-style-type: none;
     flex: 1 1 auto;
     border-right: 2px solid #fff;
+    @media (max-width: $screen-xl){
+      flex: 0 0 50%;
+    }
+    @media (max-width: $screen-md){
+      flex: 0 0 100%;
+    }
   }
   &__fact-item{
     padding: 22px 10px 22px 80px;
@@ -30,6 +65,14 @@
     font-weight: bold;
     font-size: 15px;
     line-height: (26/15);
+    @media (max-width: $screen-xl){
+      line-height: (23/15);
+    }
+    @media (max-width: $screen-xl){
+      font-size: 14px;
+      line-height: (23/14);
+    }
+
     &:before{
       content: '';
       margin-right: 10px;
@@ -66,9 +109,21 @@
     }
   }
   &__place{
-    // flex: 0 0 360px;
-    // max-width: 360px;
     background-color: #5b80be;
+    @media (max-width: $screen-xl){
+      flex: 0 0 50%;
+    }
+    @media (max-width: $screen-md){
+      flex: 0 0 100%;
+      padding-bottom: 10px;
+    }
+  }
+  &__img{
+    img{
+      @media (max-width: $screen-xl){
+        width: 100%;
+      }
+    }
   }
   &__address{
     padding-top: 15px;

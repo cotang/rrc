@@ -19,7 +19,8 @@ $screen-md:                   767px; // Medium screen / tablet
 $screen-xl:                   919px; // Extra large screen / wide desktop
 
 $container-max-widths: (
-        md:                   760px,
+        xs:                   320px,
+        md:                   766px,
         xl:                   920px
 ) !default;
 

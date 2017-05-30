@@ -26,7 +26,8 @@ mixin form()
         +e.LABEL.label
           span Город
           +e.INPUT.input(type='text', name='Город', placeholder='Укажите ваш город')
-        +e.hotel-need Нужна ли Вам гостиница в Санкт-Петербурге?
+        +e.hotel-need
+          span Нужна ли Вам гостиница в Санкт-Петербурге?
           +e.need-option
             input(type='radio', id='need-radio1', name='Необходимость гостиницы', value='Гостиница нужна')
             label(for='need-radio1') Да
@@ -40,7 +41,7 @@ mixin form()
         +e.programme-choice
           +e.choice-text
             span.bold Выберите программу,
-            |  в которой вы хотели бы принять участие (организаторы вправе вносить изменения в программу в случае, если группа на какую-либо программу не будет набрана):
+            span.normal в которой вы хотели бы принять участие (организаторы вправе вносить изменения в программу в случае, если группа на какую-либо программу не будет набрана):
           +e.options
             +e.option
               input(type='radio', id='programme-radio1', name='Программы', value='Парадный Петергоф')

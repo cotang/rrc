@@ -1,5 +1,18 @@
 .address{
   padding: 65px 0 0;
+  @media (max-width: $screen-xl){
+    padding: 40px 0 0;
+  }
+  @media (max-width: $screen-md){
+    padding: 20px 0 0;
+  }
+  .container{
+    @media (max-width: $screen-md){
+      max-width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
   &__title{
     margin: 0 0 65px;
     font-family: Roboto, Arial, sans-serif;
@@ -7,10 +20,22 @@
     line-height: (31/26);
     font-weight: normal;
     text-align: center;
+    @media (max-width: $screen-xl){
+      font-family: Calibri, sans-serif;
+      margin: 0 0 40px;
+    }
+    @media (max-width: $screen-md){
+      margin: 0 0 20px;
+      font-size: 20px;
+      line-height: (24/20);
+    }
   }
   &__map{
     background-color: #eaeaea;
     position: relative;
+    @media (max-width: $screen-md){
+      background-color: #fff;
+    }
     &:before{
       content: '';
       position: absolute;
@@ -19,6 +44,9 @@
       left: 0;
       top: 1px;
       background-color: #fff;
+      @media (max-width: $screen-md){
+        display: none;
+      }
     }
     &:after{
       content: '';
@@ -28,6 +56,9 @@
       left: 0;
       bottom: 1px;
       background-color: #dcdcdc;
+      @media (max-width: $screen-md){
+        display: none;
+      }
     }
   }
   &__map-img{
@@ -57,15 +88,64 @@
   position: relative;
   height: 50px;
   width: 100%;
-  > span{
+  @media (max-width: $screen-xl){
+    font-size: 13px;
+  }
+  @media (max-width: $screen-md){
+    height: auto;
+    line-height: normal;
+    padding-top: 10px;
+  }
+
+  > .bold{
     padding: 10px 20px;
     font-weight: bold;
+    @media (max-width: $screen-xl){
+      padding: 10px 5px;
+    }
+    @media (max-width: $screen-md){
+      display: block;
+      max-width: 300px;
+      margin: 0 auto;
+      padding-left: 60px;
+      font-weight: normal;
+      position: relative;
+    }
     &:before{
       content: '';
       display: inline-block;
       vertical-align: text-bottom;
       margin-right: 5px;
       @include sprite($s-pin-black);
+      @media (max-width: $screen-md){
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        transform: translate(-50%, 50%);
+      }
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      transform: translate(-50%, 50%);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid #999;
+      display: none;
+      @media (max-width: $screen-md){
+        display: block;
+      }
+    }
+  }
+  > .normal{
+    @media (max-width: $screen-md){
+      display: block;
+      max-width: 300px;
+      margin: 0 auto;
+      padding-left: 60px;
     }
   }
   &__btn{
@@ -76,7 +156,6 @@
     height: 50px;
     display: inline-block;
     background: linear-gradient( 180deg, rgb(89,139,189) 0%, rgb(73,88,144) 100%);
-    // background-color: transparent;
     position: absolute;
     z-index: 1;
     top: 0;
@@ -99,6 +178,15 @@
       bottom: 1px;
       background-color: rgba(#ccc, 0.5)
     }
+    @media (max-width: $screen-md){
+      display: block;
+      position: relative;
+      width: 100%;
+      text-align: center;
+      line-height: 36px;
+      height: 36px;
+    }
+
     span{
       display: inline-block;
       &:before{

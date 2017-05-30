@@ -1,15 +1,29 @@
 .footer{
   padding: 35px 0 0;
   background-image: $blue-gradient;
+  @media (max-width: $screen-xl){
+    padding: 20px 0 0;
+  }
   &__inner{
     font-size: 0;
     padding-bottom: 30px;
+    @media (max-width: $screen-xl){
+      padding-bottom: 10px;
+    }
   }
   &__block{
     display: inline-block;
     width: 25%;
     padding-left: 50px;
     position: relative;
+    @media (max-width: $screen-xl){
+      width: 50%;
+      margin-bottom: 10px;
+    }
+    @media (max-width: $screen-md){
+      width: 100%;
+    }
+
     &:before{
       content: '';
       position: absolute;
