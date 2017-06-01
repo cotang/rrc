@@ -51,3 +51,10 @@ img {
   vertical-align: middle;
 }
 
+.container{
+  @media (max-width: $screen-md){
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

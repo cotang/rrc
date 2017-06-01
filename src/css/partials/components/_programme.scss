@@ -169,6 +169,14 @@
       height: 150px;
       margin: 10px 0 0;
     }
+    img{
+      @media (max-width: $screen-md){
+        height: 100%;
+        width: 100%;
+        display: block;
+        object-fit: cover;
+      }
+    }
   }
 }
 

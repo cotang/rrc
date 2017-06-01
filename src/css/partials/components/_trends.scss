@@ -54,6 +54,7 @@
     }
     @media (max-width: $screen-md){
       flex: 0 0 100%;
+      border-right: none;
     }
   }
   &__fact-item{
