@@ -2801,7 +2801,8 @@ img {
       -webkit-transform: translateY(-50%);
           -ms-transform: translateY(-50%);
               transform: translateY(-50%);
-      transition: none; }
+      transition: none;
+      padding: 0; }
       @media (max-width: 767px) {
         .speakers__gallery .slick-arrow {
           top: -40px;
