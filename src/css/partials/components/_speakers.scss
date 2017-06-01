@@ -41,6 +41,7 @@
       top: 50%;
       transform: translateY(-50%);
       transition: none;
+      padding: 0;
       @media (max-width: $screen-md){
         top: -40px;
         transform: none;
