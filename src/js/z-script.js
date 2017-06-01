@@ -62,6 +62,7 @@ jQuery(document).ready(function($){
       $('body, html').animate({
       scrollTop: ($(el).offset().top - navHeight )}, 500);
       $('.nav__dropdown-list').hide();
+      $('.nav__list').find('.nav__item--menu').removeClass('nav__item--menu-bg');
       return false;
   });
 
