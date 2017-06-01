@@ -8704,25 +8704,23 @@ jQuery(document).ready(function($){
   var nav = $('.nav');
   var navTopCoord = nav.offset().top;
   var navHeight = $(".nav").outerHeight(true);
-  // if ($(window).width() > 1024) {
-    $(window).scroll(function () {
-      if ($(this).scrollTop() >= navTopCoord ) {
-        $(nav).addClass('nav--fixed');
-        $('main').css("padding-top", navHeight + "px");
-     } else {
-        $('main').css("padding-top", 0);
-        $(nav).removeClass('nav--fixed');
-      }
-    });
-  // }
 
-
+  $(window).scroll(function () {
+    if ($(this).scrollTop() >= navTopCoord ) {
+      $(nav).addClass('nav--fixed');
+      $('main').css("padding-top", navHeight + "px");
+   } else {
+      $('main').css("padding-top", 0);
+      $(nav).removeClass('nav--fixed');
+    }
+  });
   /* плавный скролл */
-  $('.nav__list a[href^="#"]').click(function(e){
+  $('.nav__list a[href^="#"], .nav__dropdown-list a[href^="#"]').click(function(e){
       e.preventDefault();
       var el = $(this).attr('href');
       $('body, html').animate({
       scrollTop: ($(el).offset().top - navHeight )}, 500);
+      $('.nav__dropdown-list').hide();
       return false;
   });
 
@@ -8776,24 +8774,12 @@ jQuery(document).ready(function($){
       $(this).closest('.nav').find('.nav__dropdown-list').slideToggle();
   });
 
+
   if ($(window).width() < 768) {
     $('.forum-block__img').each(function(){
       $(this).appendTo($(this).closest('.forum-block__text'));
     });
   }
-
-
-
-
-  // /* submenu в services */
-  // $('.services__list > .menu-item').mouseenter(function(e) {
-  //     e.preventDefault();
-  //     $(this).children('.sub-menu').slideDown();
-  // });
-  // $('.services__list > .menu-item').mouseleave(function(e) {
-  //     e.preventDefault();
-  //     $(this).children('.sub-menu').slideUp();
-  // });
 
 
 
@@ -8814,7 +8800,6 @@ jQuery(document).ready(function($){
   //     div.hide();
   //   }
   // });
-
 
 });
 
