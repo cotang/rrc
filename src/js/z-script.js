@@ -89,9 +89,15 @@ jQuery(document).ready(function($){
       );
   });
 
+
   /* календарь */
-  rome(calendar1, { weekStart: 1 });
-  rome(calendar2, { weekStart: 1 });
+  if ( $('#calendar1').length ){
+    rome(calendar1, { weekStart: 1 });
+  }
+  if ( $('#calendar2').length ){
+    rome(calendar2, { weekStart: 1 });
+  }
+
 
   /* карта в popup */
   var myMap;
@@ -110,9 +116,9 @@ jQuery(document).ready(function($){
   });
 
 
-  $('.nav__item--menu').click(function(e) {
+  $('.nav__item--menu a').click(function(e) {
       e.preventDefault();
-      $(this).toggleClass('nav__item--menu-bg');
+      $(this).closest('.nav__item--menu').toggleClass('nav__item--menu-bg');
       $(this).closest('.nav').find('.nav__dropdown-list').slideToggle();
   });
 
